@@ -72,7 +72,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={info.title}
-                  className="card-elegant p-6 text-center hover-lift"
+                  className="card-elegant p-6 text-center hover-lift fade-in"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="flex justify-center mb-4">
@@ -186,7 +186,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="btn-primary-elegant w-full flex items-center justify-center space-x-2"
+                    className="btn-primary-elegant w-full flex items-center justify-center space-x-2 hover:scale-105 transition-all duration-300"
                   >
                     <Send className="w-5 h-5" />
                     <span>Send Message</span>

@@ -64,11 +64,11 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <button className="btn-premium">
+              <button className="btn-premium hover:scale-105 transition-all duration-300">
                 Discover Our Story
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="glass-effect text-white px-8 py-4 rounded-xl font-semibold transition-[var(--transition-smooth)] hover:bg-white/20 hover:-translate-y-0.5 flex items-center gap-3">
+              <button className="glass-effect text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 flex items-center gap-3">
                 <Play className="w-5 h-5" />
                 Watch Our Story
               </button>

@@ -148,10 +148,10 @@ const PackagesSection = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="btn-premium flex-1">
+                  <Button className="btn-premium flex-1 hover:scale-105 transition-all duration-300">
                     Book This Package
                   </Button>
-                  <Button variant="outline" className="btn-outline-premium flex-1">
+                  <Button variant="outline" className="btn-outline-premium flex-1 hover:scale-105 transition-all duration-300">
                     Learn More
                   </Button>
                 </div>
@@ -169,11 +169,11 @@ const PackagesSection = () => {
             tailored to your specific needs, budget, and vision.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-gold-premium">
+            <Button className="btn-gold-premium hover:scale-105 transition-all duration-300">
               <Calendar className="w-5 h-5" />
               Schedule Consultation
             </Button>
-            <Button variant="outline" className="btn-outline-premium">
+            <Button variant="outline" className="btn-outline-premium hover:scale-105 transition-all duration-300">
               View Package Gallery
             </Button>
           </div>

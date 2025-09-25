@@ -6,32 +6,110 @@ const Menu = () => {
   const menuCategories = [
     {
       icon: Coffee,
-      title: 'Coffee & Beverages',
+      title: 'Hot Drinks',
       items: [
-        { name: 'Signature Espresso', price: '£3.50', description: 'Rich, full-bodied espresso with notes of chocolate and caramel' },
-        { name: 'Artisan Cappuccino', price: '£4.20', description: 'Perfectly steamed milk with beautiful latte art' },
-        { name: 'Cold Brew Special', price: '£4.80', description: 'Smooth, refreshing cold brew with a hint of vanilla' },
-        { name: 'Golden Turmeric Latte', price: '£4.50', description: 'Warming spices with oat milk and honey' },
+        { name: 'Hot Chocolate', price: '£3.00', description: 'Rich and creamy hot chocolate' },
+        { name: 'Mocha', price: '£3.00', description: 'Perfect blend of coffee and chocolate' },
+        { name: 'English Tea', price: '£3.00', description: 'Traditional English breakfast tea' },
+        { name: 'Pink Tea', price: '£3.00', description: 'Aromatic and colorful tea blend' },
+        { name: 'Karak/Desi Tea', price: '£3.00', description: 'Spiced tea with milk' },
+        { name: 'Moroccan Tea', price: '£3.00', description: 'Mint-infused Moroccan tea' },
+        { name: 'Green/Mint Tea', price: '£3.00', description: 'Refreshing green tea with mint' },
+      ]
+    },
+    {
+      icon: Coffee,
+      title: 'Coffee Menu',
+      items: [
+        { name: 'Rich (Intense) Coffee', price: '£3.00', description: 'Bold and intense coffee blend' },
+        { name: 'Arabian Coffee', price: '£3.00', description: 'Traditional Arabian coffee' },
+        { name: 'English Coffee', price: '£3.00', description: 'Classic English coffee blend' },
+        { name: 'Brazilian Coffee', price: '£3.00', description: 'Smooth Brazilian coffee beans' },
+        { name: 'Turkish Coffee', price: '£3.00', description: 'Strong traditional Turkish coffee' },
+        { name: 'Columbian Coffee', price: '£3.00', description: 'Premium Columbian coffee' },
+        { name: 'Dragon', price: '£4.00', description: 'Cloudy & Spicy coffee creation' },
+        { name: 'Unicorn', price: '£4.00', description: 'Cloudy & Sweet coffee delight' },
+        { name: 'Phoenix', price: '£4.00', description: 'Freshness of coffee perfection' },
+      ]
+    },
+    {
+      icon: Coffee,
+      title: 'Signature Drinks',
+      items: [
+        { name: 'Infusion', price: '£3.00', description: 'Coffee, Ice Cream, Chocolate, Cream, Chocolate Shavings' },
+        { name: 'Berry Rich', price: '£3.00', description: 'Crushed Berries, Ice Cream, Coffee, Biscuit' },
+        { name: 'AFFOGATO Single Shot', price: '£3.00', description: 'Espresso shot over vanilla ice cream' },
+        { name: 'AFFOGATO Double Shot', price: '£3.00', description: 'Double espresso shot over vanilla ice cream' },
+        { name: 'Fruit Berry Shake', price: '£3.50', description: 'Fresh berry blend shake' },
+        { name: 'Ice Cream Shake', price: '£4.00', description: 'Blended with your flavour of ice cream' },
+      ]
+    },
+    {
+      icon: Coffee,
+      title: 'Cold Drinks',
+      items: [
+        { name: 'Iced Tea', price: '£3.00', description: 'Refreshing iced tea' },
+        { name: 'Chocolate Chip Frappe', price: '£3.00', description: 'Chocolate chip frappe delight' },
+        { name: 'Hazelnut & Cream Frappe', price: '£3.00', description: 'Creamy hazelnut frappe' },
+        { name: 'Cream Frappe', price: '£3.00', description: 'Classic cream frappe' },
+        { name: 'Caramel Frappe', price: '£3.00', description: 'Sweet caramel frappe' },
+        { name: 'Karak Coffee', price: '£3.00', description: 'Spiced iced coffee' },
+        { name: 'Strawberry Daiquiri', price: '£5.00', description: 'Fresh strawberry blend' },
+        { name: 'Wild Forest', price: '£5.00', description: 'Wild berry forest blend' },
+        { name: 'Exotic Palm', price: '£5.00', description: 'Tropical palm fruit blend' },
+        { name: 'Gold Dust', price: '£5.00', description: 'Golden fruit creation' },
+        { name: 'Night Fog', price: '£5.00', description: 'Mysterious smoky blend' },
+        { name: 'Frozen Enchantment', price: '£5.00', description: 'Magical frozen creation' },
+        { name: 'Storm Breeze', price: '£5.00', description: 'Refreshing storm blend' },
+        { name: 'Sunset Silk', price: '£5.00', description: 'Creamy sunset creation' },
+        { name: 'Cloud Coconut', price: '£5.00', description: 'Coconut cloud delight' },
       ]
     },
     {
       icon: Cake,
-      title: 'Pastries & Sweets',
+      title: 'Desserts',
       items: [
-        { name: 'Fresh Croissants', price: '£3.20', description: 'Buttery, flaky pastries baked fresh daily' },
-        { name: 'Artisan Sourdough', price: '£4.80', description: 'House-made sourdough with seasonal spreads' },
-        { name: 'Chocolate Éclair', price: '£4.50', description: 'Delicate choux pastry filled with rich chocolate cream' },
-        { name: 'Seasonal Fruit Tart', price: '£5.20', description: 'Fresh seasonal fruits on vanilla custard base' },
+        { name: 'Chocolate Cake', price: '£3.00', description: 'Rich chocolate cake slice' },
+        { name: 'Vanilla Cake', price: '£3.00', description: 'Classic vanilla cake slice' },
+        { name: 'Red Velvet Cake', price: '£3.00', description: 'Luxurious red velvet cake' },
+        { name: 'Carrot Cake', price: '£3.00', description: 'Moist carrot cake with cream cheese frosting' },
+        { name: 'Cheese Cake', price: '£3.00', description: 'Creamy cheesecake slice' },
+        { name: 'Chocolate Mousse', price: '£4.00', description: 'Decadent chocolate mousse' },
+        { name: 'Raspberry Mousse', price: '£4.00', description: 'Fresh raspberry mousse' },
+        { name: 'Lemon Mousse', price: '£4.00', description: 'Zesty lemon mousse' },
+        { name: 'Vegan Chocolate Mousse', price: '£4.00', description: 'Plant-based chocolate mousse' },
+        { name: 'Chocolate Pudding', price: '£5.00', description: 'Classic chocolate pudding' },
+        { name: 'Bread Pudding', price: '£5.00', description: 'Traditional bread pudding' },
+        { name: 'Flan', price: '£5.00', description: 'Creamy caramel flan' },
+        { name: 'Tapioca Pudding', price: '£5.00', description: 'Traditional tapioca pudding' },
+        { name: 'Pressed Croissant & Chocolate Dipped', price: '£6.00', description: 'Crispy croissant with chocolate' },
+        { name: 'Lemon Meringue Pie', price: '£6.50', description: 'Tangy lemon pie with fluffy meringue' },
+        { name: 'Chocolate Churros with Dipping Sauces', price: '£7.00', description: 'Crispy churros with chocolate sauce' },
       ]
     },
     {
       icon: Sandwich,
-      title: 'Light Meals',
+      title: 'Sandwiches',
       items: [
-        { name: 'Avocado Toast Deluxe', price: '£8.50', description: 'Smashed avocado, poached egg, sourdough, microgreens' },
-        { name: 'Gourmet Panini', price: '£9.20', description: 'Selection of artisanal fillings on freshly baked bread' },
-        { name: 'Mediterranean Bowl', price: '£10.80', description: 'Quinoa, roasted vegetables, feta, herb dressing' },
-        { name: 'Soup of the Day', price: '£6.50', description: 'Homemade soup served with artisan bread' },
+        { name: 'Tuna Sandwich', price: '£5.00', description: 'Fresh tuna sandwich' },
+        { name: 'Onion Sandwich', price: '£5.00', description: 'Caramelized onion sandwich' },
+        { name: 'Sweet Corn Sandwich', price: '£5.00', description: 'Sweet corn delight' },
+        { name: 'Pepper Sandwich', price: '£5.00', description: 'Bell pepper sandwich' },
+        { name: 'Cheese Sandwich', price: '£5.00', description: 'Classic cheese sandwich' },
+        { name: 'Green Chilli Sandwich', price: '£5.00', description: 'Spicy green chilli sandwich' },
+      ]
+    },
+    {
+      icon: Wine,
+      title: 'Acai Bowls',
+      items: [
+        { name: 'Oatmeal Bowl', price: '£5.00', description: 'Nutritious oatmeal acai bowl' },
+        { name: 'Green Matcha Bowl', price: '£5.00', description: 'Energizing matcha acai bowl' },
+        { name: 'Blue Island Bowl', price: '£5.00', description: 'Tropical blue spirulina bowl' },
+        { name: 'Coconut Bowl', price: '£5.00', description: 'Creamy coconut acai bowl' },
+        { name: 'Gold Coast Bowl', price: '£5.00', description: 'Golden turmeric acai bowl' },
+        { name: 'Earthy Nut Bowl', price: '£5.00', description: 'Nutty protein acai bowl' },
+        { name: 'Pink Pitaya Bowl', price: '£5.00', description: 'Vibrant dragon fruit bowl' },
       ]
     }
   ];
@@ -102,7 +180,7 @@ const Menu = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Reserve your table today and let us craft the perfect café experience for you.
             </p>
-            <button className="btn-primary-elegant">
+            <button className="btn-premium hover:scale-105 transition-transform duration-300">
               Reserve Your Table
             </button>
           </div>

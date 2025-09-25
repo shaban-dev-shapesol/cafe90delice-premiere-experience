@@ -63,7 +63,7 @@ const Events = () => {
               {upcomingEvents.map((event, index) => (
                 <div
                   key={event.title}
-                  className="card-elegant p-6 hover-lift"
+                  className="card-elegant p-6 hover-lift fade-in"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="flex items-center justify-between mb-4">
@@ -97,7 +97,7 @@ const Events = () => {
                     {event.description}
                   </p>
                   
-                  <button className="btn-outline-elegant w-full">
+                  <button className="btn-outline-premium w-full hover:scale-105 transition-all duration-300">
                     Learn More
                   </button>
                 </div>
@@ -117,23 +117,23 @@ const Events = () => {
               can be reserved for private events, corporate meetings, and celebrations.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
+              <div className="text-center fade-in delay-100">
                 <Users className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-foreground mb-2">Corporate Events</h3>
                 <p className="text-body-elegant">Perfect for meetings, workshops, and team building.</p>
               </div>
-              <div className="text-center">
+              <div className="text-center fade-in delay-200">
                 <Coffee className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-foreground mb-2">Celebrations</h3>
                 <p className="text-body-elegant">Birthdays, anniversaries, and special occasions.</p>
               </div>
-              <div className="text-center">
+              <div className="text-center fade-in delay-300">
                 <Music className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-foreground mb-2">Cultural Events</h3>
                 <p className="text-body-elegant">Art exhibitions, book launches, and performances.</p>
               </div>
             </div>
-            <button className="btn-primary-elegant">
+            <button className="btn-primary-elegant hover:scale-105 transition-all duration-300">
               Inquire About Private Events
             </button>
           </div>

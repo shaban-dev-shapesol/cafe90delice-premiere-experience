@@ -107,11 +107,11 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <div
-                  key={value.title}
-                  className="card-elegant p-6 text-center hover-lift"
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
+              <div
+                key={value.title}
+                className="card-elegant p-6 text-center hover-lift fade-in"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
                   <div className="flex justify-center mb-4">
                     <value.icon className="w-12 h-12 text-primary" />
                   </div>
@@ -138,10 +138,10 @@ const About = () => {
               We can't wait to share our passion for exceptional coffee with you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-medium hover:bg-primary-foreground/90 transition-[var(--transition-smooth)]">
+              <button className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-medium hover:bg-primary-foreground/90 hover:scale-105 transition-all duration-300">
                 Visit Our Café
               </button>
-              <button className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 rounded-lg font-medium transition-[var(--transition-smooth)]">
+              <button className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-105 px-8 py-4 rounded-lg font-medium transition-all duration-300">
                 View Our Menu
               </button>
             </div>

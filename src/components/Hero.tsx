@@ -1,54 +1,102 @@
-import { ArrowDown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Play } from 'lucide-react';
+import coffeeHero from '@/assets/coffee-hero.jpg';
 import cafeInterior from '@/assets/cafe-interior.jpg';
+import pastries from '@/assets/pastries.jpg';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
-  const scrollToContent = () => {
-    const nextSection = document.getElementById('featured');
-    nextSection?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      image: coffeeHero,
+      title: "Exceptional Coffee Experience",
+      subtitle: "Where every cup tells a story of craftsmanship and passion"
+    },
+    {
+      image: cafeInterior,
+      title: "Perfect for Every Celebration",
+      subtitle: "From intimate gatherings to corporate events, we create unforgettable moments"
+    },
+    {
+      image: pastries,
+      title: "Artisanal Desserts & Treats",
+      subtitle: "Handcrafted with premium ingredients and traditional techniques"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <section className="hero-section">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Slideshow */}
       <div className="absolute inset-0">
-        <img
-          src={cafeInterior}
-          alt="Cafe90Delice elegant interior with warm lighting and modern design"
-          className="w-full h-full object-cover"
-        />
-        <div className="hero-overlay"></div>
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+          </div>
+        ))}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h1 className="text-hero fade-in mb-6">
-          Cafe90Delice
-        </h1>
-        <p className="text-subtitle slide-up mb-8 delay-300">
-          Where artisanal coffee meets warm hospitality
-        </p>
-        <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto slide-up delay-500 leading-relaxed">
-          Experience the perfect blend of premium coffee, fresh pastries, and cozy atmosphere 
-          in the heart of the UK. Every cup tells a story, every visit creates a memory.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center slide-up delay-700">
-          <button className="btn-primary-elegant hover-lift">
-            Explore Our Menu
-          </button>
-          <button className="btn-outline-elegant hover-lift">
-            Reserve Your Table
-          </button>
+      <div className="relative z-10 text-center text-white section-padding">
+        <div className="container-premium">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-8xl heading-premium mb-8 text-shadow animate-fade-in-up">
+              Cafe90Delice
+            </h1>
+            <h2 className="text-2xl md:text-4xl font-light mb-6 text-shadow animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              {slides[currentSlide].title}
+            </h2>
+            <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              {slides[currentSlide].subtitle}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <button className="btn-premium">
+                Discover Our Story
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="glass-effect text-white px-8 py-4 rounded-xl font-semibold transition-[var(--transition-smooth)] hover:bg-white/20 hover:-translate-y-0.5 flex items-center gap-3">
+                <Play className="w-5 h-5" />
+                Watch Our Story
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
 
-        {/* Scroll Indicator */}
-        <button 
-          onClick={scrollToContent}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-          aria-label="Scroll to content"
-        >
-          <ArrowDown className="w-6 h-6 text-primary-foreground/60" />
-        </button>
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide 
+                ? 'bg-white scale-125' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+        </div>
       </div>
     </section>
   );

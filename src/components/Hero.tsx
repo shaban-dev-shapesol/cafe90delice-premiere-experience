@@ -53,22 +53,22 @@ const Hero = () => {
       <div className="relative z-10 text-center text-white section-padding">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-8xl heading-premium mb-8 text-shadow animate-fade-in-up">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl heading-premium mb-8 text-shadow animate-fade-in-up">
               Cafe90Delice
             </h1>
-            <h2 className="text-2xl md:text-4xl font-light mb-6 text-shadow animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-light mb-6 text-shadow animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {slides[currentSlide].title}
             </h2>
-            <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up px-4" style={{ animationDelay: '0.4s' }}>
               {slides[currentSlide].subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              <button className="btn-premium hover:scale-105 transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-4" style={{ animationDelay: '0.6s' }}>
+              <button className="w-full sm:w-auto btn-premium hover:scale-105 transition-all duration-300">
                 Discover Our Story
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="glass-effect text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 flex items-center gap-3">
+              <button className="w-full sm:w-auto glass-effect text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 flex items-center justify-center gap-3">
                 <Play className="w-5 h-5" />
                 Watch Our Story
               </button>

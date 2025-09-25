@@ -94,7 +94,7 @@ const PackagesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 mb-16">
           {packages.map((pkg, index) => (
             <div
               key={pkg.id}
@@ -147,11 +147,11 @@ const PackagesSection = () => {
                   </ul>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="btn-premium flex-1 hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <Button className="w-full sm:flex-1 btn-premium hover:scale-105 transition-all duration-300">
                     Book This Package
                   </Button>
-                  <Button variant="outline" className="btn-outline-premium flex-1 hover:scale-105 transition-all duration-300">
+                  <Button variant="outline" className="w-full sm:flex-1 btn-outline-premium hover:scale-105 transition-all duration-300">
                     Learn More
                   </Button>
                 </div>
@@ -168,12 +168,12 @@ const PackagesSection = () => {
             Every celebration is unique. Our team specializes in creating bespoke packages 
             tailored to your specific needs, budget, and vision.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-gold-premium hover:scale-105 transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button className="w-full sm:w-auto btn-gold-premium hover:scale-105 transition-all duration-300">
               <Calendar className="w-5 h-5" />
               Schedule Consultation
             </Button>
-            <Button variant="outline" className="btn-outline-premium hover:scale-105 transition-all duration-300">
+            <Button variant="outline" className="w-full sm:w-auto btn-outline-premium hover:scale-105 transition-all duration-300">
               View Package Gallery
             </Button>
           </div>

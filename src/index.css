@@ -2,41 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cafe90Delice Design System - Premium café aesthetic with warm, elegant tones */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base Colors - Warm cream and sophisticated charcoal */
+    --background: 35 20% 98%;
+    --foreground: 200 8% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card System - Subtle warmth */
+    --card: 35 25% 97%;
+    --card-foreground: 200 8% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Interactive Elements */
+    --popover: 35 25% 97%;
+    --popover-foreground: 200 8% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Colors - Deep forest green as primary accent */
+    --primary: 155 40% 25%;
+    --primary-foreground: 35 20% 98%;
+    --primary-glow: 155 30% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm cream tones */
+    --secondary: 35 15% 92%;
+    --secondary-foreground: 200 8% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Elements - Soft, understated */
+    --muted: 35 12% 90%;
+    --muted-foreground: 200 6% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Rich coffee brown */
+    --accent: 25 20% 82%;
+    --accent-foreground: 200 8% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Premium Gold Accent */
+    --gold: 45 85% 55%;
+    --gold-foreground: 200 8% 15%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Status Colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 35 20% 98%;
 
-    --radius: 0.5rem;
+    /* Borders and Inputs - Warm, subtle */
+    --border: 35 15% 85%;
+    --input: 35 15% 85%;
+    --ring: 155 40% 25%;
+
+    /* Design Tokens */
+    --radius: 0.75rem;
+
+    /* Custom Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(155 40% 25%), hsl(155 30% 35%));
+    --gradient-warm: linear-gradient(180deg, hsl(35 25% 97%), hsl(35 20% 94%));
+    --gradient-elegant: linear-gradient(135deg, hsl(35 20% 98%), hsl(35 15% 92%));
+
+    /* Elegant Shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(200 8% 15% / 0.1);
+    --shadow-elegant: 0 10px 40px -12px hsl(155 40% 25% / 0.15);
+    --shadow-hero: 0 25px 60px -15px hsl(200 8% 15% / 0.2);
+
+    /* Smooth Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.2s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +127,95 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-light;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center overflow-hidden;
+    background: var(--gradient-hero);
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-br from-primary/80 to-primary-glow/60;
+  }
+
+  /* Elegant Card Styles */
+  .card-elegant {
+    @apply bg-card border border-border rounded-xl shadow-[var(--shadow-soft)] 
+           hover:shadow-[var(--shadow-elegant)] transition-[var(--transition-smooth)];
+  }
+
+  /* Smooth Animations */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .hover-lift {
+    @apply transition-[var(--transition-quick)] hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)];
+  }
+
+  /* Typography Styles */
+  .text-hero {
+    @apply text-5xl md:text-7xl font-light tracking-tight text-primary-foreground;
+  }
+
+  .text-subtitle {
+    @apply text-xl md:text-2xl font-light text-primary-foreground/90;
+  }
+
+  .text-body-elegant {
+    @apply text-base leading-relaxed text-muted-foreground;
+  }
+
+  /* Button Variants */
+  .btn-primary-elegant {
+    @apply bg-primary hover:bg-primary-glow text-primary-foreground 
+           px-8 py-4 rounded-lg font-medium transition-[var(--transition-smooth)]
+           shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elegant)];
+  }
+
+  .btn-outline-elegant {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
+           px-8 py-4 rounded-lg font-medium transition-[var(--transition-smooth)];
+  }
+
+  .btn-gold {
+    @apply bg-gradient-to-r from-gold to-gold/80 text-gold-foreground
+           px-8 py-4 rounded-lg font-medium transition-[var(--transition-smooth)]
+           shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-elegant)] hover:scale-105;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -72,7 +72,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={info.title}
-                  className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                  className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="flex justify-center mb-6">
@@ -85,7 +85,7 @@ const Contact = () => {
                   </h3>
                   <div className="space-y-2">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-gray-600 text-sm leading-relaxed">
+                      <p key={idx} className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere">
                         {detail}
                       </p>
                     ))}

@@ -72,18 +72,20 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div
                   key={info.title}
-                  className="card-elegant p-6 text-center hover-lift fade-in"
+                  className="card-elegant p-8 text-center hover-lift fade-in"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="flex justify-center mb-4">
-                    <info.icon className="w-12 h-12 text-primary" />
+                  <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                      <info.icon className="w-8 h-8 text-primary" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-medium text-foreground mb-4">
+                  <h3 className="text-2xl font-semibold text-foreground mb-6">
                     {info.title}
                   </h3>
-                  <div className="space-y-1">
+                  <div className="space-y-3">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-body-elegant">
+                      <p key={idx} className="text-lg text-muted-foreground leading-relaxed">
                         {detail}
                       </p>
                     ))}

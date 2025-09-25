@@ -68,11 +68,11 @@ const Contact = () => {
         {/* Contact Information */}
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {contactInfo.map((info, index) => (
                 <div
                   key={info.title}
-                  className="card-elegant p-8 text-center hover-lift fade-in"
+                  className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <div className="flex justify-center mb-6">
@@ -80,12 +80,12 @@ const Contact = () => {
                       <info.icon className="w-8 h-8 text-primary" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-semibold text-foreground mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {info.title}
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-2">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-lg text-muted-foreground leading-relaxed">
+                      <p key={idx} className="text-gray-600 text-sm leading-relaxed">
                         {detail}
                       </p>
                     ))}

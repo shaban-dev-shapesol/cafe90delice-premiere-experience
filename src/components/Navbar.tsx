@@ -48,7 +48,7 @@ const Navbar = () => {
 
           {/* Reservation Button */}
           <div className="hidden md:block">
-            <button className="btn-primary-elegant">
+            <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary/20">
               Reserve Table
             </button>
           </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="px-3 pt-4">
-              <button className="btn-primary-elegant w-full">
+              <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 rounded-lg font-medium transition-all duration-300 hover:shadow-lg w-full border border-primary/20">
                 Reserve Table
               </button>
             </div>

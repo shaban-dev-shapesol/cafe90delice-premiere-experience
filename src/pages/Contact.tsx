@@ -260,29 +260,32 @@ const Contact = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-primary text-primary-foreground py-16">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-medium mb-6">
-              Get In Touch Today
-            </h2>
-            <p className="text-xl mb-8 leading-relaxed">
-              Have questions or want to make a reservation? 
-              Contact us and we'll get back to you quickly.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <section className="relative bg-gradient-to-br from-primary via-primary to-primary-glow text-primary-foreground py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent"></div>
+          <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div className="mb-8">
+              <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
+                Get In Touch Today
+              </h2>
+              <p className="text-xl md:text-2xl mb-0 leading-relaxed opacity-90">
+                Have questions or want to make a reservation? 
+                Contact us and we'll get back to you quickly.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a 
                 href="tel:+442012345678"
-                className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-medium hover:bg-primary-foreground/90 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+                className="group bg-white/10 backdrop-blur-sm text-white border border-white/20 px-10 py-5 rounded-2xl font-medium hover:bg-white hover:text-primary hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl"
               >
-                <Phone className="w-5 h-5" />
-                Call Now
+                <Phone className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-lg">Call Now</span>
               </a>
               <a 
                 href="mailto:hello@cafe90delice.co.uk"
-                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-105 px-8 py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2"
+                className="group bg-white text-primary px-10 py-5 rounded-2xl font-medium hover:bg-white/90 hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl"
               >
-                <Mail className="w-5 h-5" />
-                Send Email
+                <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-lg">Send Email</span>
               </a>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import cafeInteriorHero from '@/assets/cafe-interior-hero.png';
 
 const Hero = () => {
@@ -31,9 +32,11 @@ const Hero = () => {
             </p>
             
             <div className="flex justify-center animate-fade-in-up px-4" style={{ animationDelay: '0.6s' }}>
-              <Button className="btn-premium hover:scale-105 transition-all duration-300">
-                Explore Our Menu
-                <ArrowRight className="w-5 h-5" />
+              <Button asChild className="btn-premium hover:scale-105 transition-all duration-300">
+                <Link to="/menu">
+                  Explore Our Menu
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
               </Button>
             </div>
           </div>

@@ -1,67 +1,57 @@
 import { Instagram, Facebook, Heart, MessageCircle, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const SocialMediaSection = () => {
   // Real Instagram posts data from Cafe90Delice
-  const instagramPosts = [
-    {
-      id: 1,
-      image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/IMG_8980-768x1024.jpeg',
-      caption: 'Delicious treats and premium coffee at Cafe90Delice ☕ #Cafe90Delice #PremiumCoffee #Manchester',
-      likes: 145,
-      comments: 18,
-      date: '3 days ago',
-      link: 'https://www.instagram.com/cafe_delice_/'
-    },
-    {
-      id: 2,
-      image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/441C01F5-5CD9-4A7C-982F-6EF12441F86C-768x1024.jpeg',
-      caption: 'Fresh pastries and artisan coffee - the perfect combination! 🥐 #FreshPastries #ArtisanCoffee',
-      likes: 123,
-      comments: 15,
-      date: '5 days ago',
-      link: 'https://www.instagram.com/cafe_delice_/'
-    },
-    {
-      id: 3,
-      image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/IMG_0445-768x1024.jpeg',
-      caption: 'Beautiful café atmosphere at Cafe90Delice ✨ #CafeVibes #Manchester #Coffee',
-      likes: 167,
-      comments: 22,
-      date: '1 week ago',
-      link: 'https://www.instagram.com/cafe_delice_/'
-    },
-    {
-      id: 4,
-      image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-118.jpg',
-      caption: 'Professional photography session at our beautiful café 📸 #CafePhotography #ProfessionalShoot',
-      likes: 189,
-      comments: 28,
-      date: '1 week ago',
-      link: 'https://www.instagram.com/cafe_delice_/'
-    },
-    {
-      id: 5,
-      image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-156.jpg',
-      caption: 'Birthday celebrations made special at Cafe90Delice 🎂 #BirthdayParty #SpecialCelebrations',
-      likes: 201,
-      comments: 31,
-      date: '2 weeks ago',
-      link: 'https://www.instagram.com/cafe_delice_/'
-    },
-    {
-      id: 6,
-      image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-148.jpg',
-      caption: 'Cozy corner for intimate gatherings and meetings ☕ #IntimateSpace #BusinessMeetings',
-      likes: 156,
-      comments: 19,
-      date: '2 weeks ago',
-      link: 'https://www.instagram.com/cafe_delice_/'
-    }
-  ];
-
-  return (
-    <section className="section-padding bg-gradient-to-br from-accent to-warm">
+  const instagramPosts = [{
+    id: 1,
+    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/IMG_8980-768x1024.jpeg',
+    caption: 'Delicious treats and premium coffee at Cafe90Delice ☕ #Cafe90Delice #PremiumCoffee #Manchester',
+    likes: 145,
+    comments: 18,
+    date: '3 days ago',
+    link: 'https://www.instagram.com/cafe_delice_/'
+  }, {
+    id: 2,
+    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/441C01F5-5CD9-4A7C-982F-6EF12441F86C-768x1024.jpeg',
+    caption: 'Fresh pastries and artisan coffee - the perfect combination! 🥐 #FreshPastries #ArtisanCoffee',
+    likes: 123,
+    comments: 15,
+    date: '5 days ago',
+    link: 'https://www.instagram.com/cafe_delice_/'
+  }, {
+    id: 3,
+    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/IMG_0445-768x1024.jpeg',
+    caption: 'Beautiful café atmosphere at Cafe90Delice ✨ #CafeVibes #Manchester #Coffee',
+    likes: 167,
+    comments: 22,
+    date: '1 week ago',
+    link: 'https://www.instagram.com/cafe_delice_/'
+  }, {
+    id: 4,
+    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-118.jpg',
+    caption: 'Professional photography session at our beautiful café 📸 #CafePhotography #ProfessionalShoot',
+    likes: 189,
+    comments: 28,
+    date: '1 week ago',
+    link: 'https://www.instagram.com/cafe_delice_/'
+  }, {
+    id: 5,
+    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-156.jpg',
+    caption: 'Birthday celebrations made special at Cafe90Delice 🎂 #BirthdayParty #SpecialCelebrations',
+    likes: 201,
+    comments: 31,
+    date: '2 weeks ago',
+    link: 'https://www.instagram.com/cafe_delice_/'
+  }, {
+    id: 6,
+    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-148.jpg',
+    caption: 'Cozy corner for intimate gatherings and meetings ☕ #IntimateSpace #BusinessMeetings',
+    likes: 156,
+    comments: 19,
+    date: '2 weeks ago',
+    link: 'https://www.instagram.com/cafe_delice_/'
+  }];
+  return <section className="section-padding bg-gradient-to-br from-accent to-warm">
       <div className="container-premium">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-5xl md:text-6xl heading-premium text-foreground mb-8">
@@ -73,18 +63,11 @@ const SocialMediaSection = () => {
           </p>
           
           <div className="flex justify-center gap-6">
-            <Button 
-              className="btn-premium flex items-center gap-3"
-              onClick={() => window.open('https://www.instagram.com/cafe_delice_/', '_blank')}
-            >
+            <Button className="btn-premium flex items-center gap-3" onClick={() => window.open('https://www.instagram.com/cafe_delice_/', '_blank')}>
               <Instagram className="w-5 h-5" />
               Follow @cafe_delice_
             </Button>
-            <Button 
-              variant="outline" 
-              className="btn-outline-premium flex items-center gap-3"
-              onClick={() => window.open('https://www.facebook.com/profile.php?id=61560319606863', '_blank')}
-            >
+            <Button variant="outline" className="btn-outline-premium flex items-center gap-3" onClick={() => window.open('https://www.facebook.com/profile.php?id=61560319606863', '_blank')}>
               <Facebook className="w-5 h-5" />
               Like Our Page
             </Button>
@@ -93,19 +76,11 @@ const SocialMediaSection = () => {
 
         {/* Instagram Feed Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {instagramPosts.map((post, index) => (
-            <div
-              key={post.id}
-              className="group relative overflow-hidden rounded-2xl bg-white shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-premium)] transition-all duration-500 card-hover animate-on-scroll cursor-pointer"
-              style={{ animationDelay: `${index * 100}ms` }}
-              onClick={() => window.open(post.link, '_blank')}
-            >
+          {instagramPosts.map((post, index) => <div key={post.id} className="group relative overflow-hidden rounded-2xl bg-white shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-premium)] transition-all duration-500 card-hover animate-on-scroll cursor-pointer" style={{
+          animationDelay: `${index * 100}ms`
+        }} onClick={() => window.open(post.link, '_blank')}>
               <div className="aspect-square overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={`Instagram post from @cafe_delice_ - ${post.caption.slice(0, 50)}...`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <img src={post.image} alt={`Instagram post from @cafe_delice_ - ${post.caption.slice(0, 50)}...`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -147,36 +122,11 @@ const SocialMediaSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Social Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-on-scroll">
-          <div className="text-center card-premium p-6">
-            <Instagram className="w-8 h-8 text-primary mx-auto mb-3" />
-            <div className="text-2xl font-bold text-foreground mb-1">5.2K</div>
-            <div className="text-premium text-sm">Followers</div>
-          </div>
-          
-          <div className="text-center card-premium p-6">
-            <Facebook className="w-8 h-8 text-primary mx-auto mb-3" />
-            <div className="text-2xl font-bold text-foreground mb-1">3.8K</div>
-            <div className="text-premium text-sm">Likes</div>
-          </div>
-          
-          <div className="text-center card-premium p-6">
-            <Heart className="w-8 h-8 text-primary mx-auto mb-3" />
-            <div className="text-2xl font-bold text-foreground mb-1">12K</div>
-            <div className="text-premium text-sm">Total Likes</div>
-          </div>
-          
-          <div className="text-center card-premium p-6">
-            <Share2 className="w-8 h-8 text-primary mx-auto mb-3" />
-            <div className="text-2xl font-bold text-foreground mb-1">2.1K</div>
-            <div className="text-premium text-sm">Shares</div>
-          </div>
-        </div>
+        
 
         {/* Call to Action */}
         <div className="text-center mt-16 card-premium p-12 animate-on-scroll">
@@ -203,8 +153,6 @@ const SocialMediaSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SocialMediaSection;

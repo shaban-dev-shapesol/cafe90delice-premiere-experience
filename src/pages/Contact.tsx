@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,45 +10,35 @@ const Contact = () => {
     message: '',
     subject: 'general'
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
-
-  const contactInfo = [
-    {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: ['123 High Street', 'Manchester, M1 1AA', 'United Kingdom']
-    },
-    {
-      icon: Phone,
-      title: 'Call Us',
-      details: ['+44 20 1234 5678']
-    },
-    {
-      icon: Mail,
-      title: 'Email Us',
-      details: ['hello@cafe90delice.co.uk', 'reservations@cafe90delice.co.uk']
-    },
-    {
-      icon: Clock,
-      title: 'Opening Hours',
-      details: ['Mon-Fri: 7:00 AM - 8:00 PM', 'Sat-Sun: 8:00 AM - 9:00 PM']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const contactInfo = [{
+    icon: MapPin,
+    title: 'Visit Us',
+    details: ['123 High Street', 'Manchester, M1 1AA', 'United Kingdom']
+  }, {
+    icon: Phone,
+    title: 'Call Us',
+    details: ['+44 20 1234 5678']
+  }, {
+    icon: Mail,
+    title: 'Email Us',
+    details: ['hello@cafe90delice.co.uk', 'reservations@cafe90delice.co.uk']
+  }, {
+    icon: Clock,
+    title: 'Opening Hours',
+    details: ['Mon-Fri: 7:00 AM - 8:00 PM', 'Sat-Sun: 8:00 AM - 9:00 PM']
+  }];
+  return <div className="min-h-screen">
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
@@ -69,12 +58,9 @@ const Contact = () => {
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {contactInfo.map((info, index) => (
-                <div
-                  key={info.title}
-                  className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-                  style={{ animationDelay: `${index * 150}ms` }}
-                >
+              {contactInfo.map((info, index) => <div key={info.title} className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100" style={{
+              animationDelay: `${index * 150}ms`
+            }}>
                   <div className="flex justify-center mb-6">
                     <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
                       <info.icon className="w-8 h-8 text-primary" />
@@ -85,38 +71,23 @@ const Contact = () => {
                   </h3>
                    <div className="space-y-2">
                      {info.details.map((detail, idx) => {
-                       // Make phone numbers and emails clickable
-                       if (info.title === 'Call Us' && detail.startsWith('+')) {
-                         return (
-                           <a 
-                             key={idx} 
-                             href={`tel:${detail}`}
-                             className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere hover:text-primary transition-colors duration-200 cursor-pointer"
-                           >
+                  // Make phone numbers and emails clickable
+                  if (info.title === 'Call Us' && detail.startsWith('+')) {
+                    return <a key={idx} href={`tel:${detail}`} className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere hover:text-primary transition-colors duration-200 cursor-pointer">
                              {detail}
-                           </a>
-                         );
-                       }
-                       if (info.title === 'Email Us' && detail.includes('@')) {
-                         return (
-                           <a 
-                             key={idx} 
-                             href={`mailto:${detail}`}
-                             className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere hover:text-primary transition-colors duration-200 cursor-pointer"
-                           >
+                           </a>;
+                  }
+                  if (info.title === 'Email Us' && detail.includes('@')) {
+                    return <a key={idx} href={`mailto:${detail}`} className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere hover:text-primary transition-colors duration-200 cursor-pointer">
                              {detail}
-                           </a>
-                         );
-                       }
-                       return (
-                         <p key={idx} className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere">
+                           </a>;
+                  }
+                  return <p key={idx} className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere">
                            {detail}
-                         </p>
-                       );
-                     })}
+                         </p>;
+                })}
                    </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Contact Form & Map */}
@@ -132,31 +103,13 @@ const Contact = () => {
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                         Full Name *
                       </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]"
-                        placeholder="Your full name"
-                      />
+                      <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]" placeholder="Your full name" />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                         Email Address *
                       </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]"
-                        placeholder="your@email.com"
-                      />
+                      <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]" placeholder="your@email.com" />
                     </div>
                   </div>
 
@@ -165,27 +118,13 @@ const Contact = () => {
                       <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                         Phone Number
                       </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]"
-                        placeholder="+44 20 1234 5678"
-                      />
+                      <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]" placeholder="+44 20 1234 5678" />
                     </div>
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                         Subject
                       </label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]"
-                      >
+                      <select id="subject" name="subject" value={formData.subject} onChange={handleChange} className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)]">
                         <option value="general">General Inquiry</option>
                         <option value="reservation">Reservation</option>
                         <option value="event">Private Event</option>
@@ -199,22 +138,10 @@ const Contact = () => {
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                       Message *
                     </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={6}
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)] resize-vertical"
-                      placeholder="Tell us how we can help you..."
-                    />
+                    <textarea id="message" name="message" required rows={6} value={formData.message} onChange={handleChange} className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-[var(--transition-quick)] resize-vertical" placeholder="Tell us how we can help you..." />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="btn-primary-elegant w-full flex items-center justify-center space-x-2 hover:scale-105 transition-all duration-300"
-                  >
+                  <button type="submit" className="btn-primary-elegant w-full flex items-center justify-center space-x-2 hover:scale-105 transition-all duration-300">
                     <Send className="w-5 h-5" />
                     <span>Send Message</span>
                   </button>
@@ -261,7 +188,7 @@ const Contact = () => {
 
         {/* Call to Action */}
         <section className="relative bg-gradient-to-br from-primary via-primary to-primary-glow text-primary-foreground py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent"></div>
+          
           <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="mb-8">
               <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
@@ -273,17 +200,11 @@ const Contact = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a 
-                href="tel:+442012345678"
-                className="group bg-white/10 backdrop-blur-sm text-white border border-white/20 px-10 py-5 rounded-2xl font-medium hover:bg-white hover:text-primary hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl"
-              >
+              <a href="tel:+442012345678" className="group bg-white/10 backdrop-blur-sm text-white border border-white/20 px-10 py-5 rounded-2xl font-medium hover:bg-white hover:text-primary hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl">
                 <Phone className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-lg">Call Now</span>
               </a>
-              <a 
-                href="mailto:hello@cafe90delice.co.uk"
-                className="group bg-white text-primary px-10 py-5 rounded-2xl font-medium hover:bg-white/90 hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl"
-              >
+              <a href="mailto:hello@cafe90delice.co.uk" className="group bg-white text-primary px-10 py-5 rounded-2xl font-medium hover:bg-white/90 hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl">
                 <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-lg">Send Email</span>
               </a>
@@ -292,8 +213,6 @@ const Contact = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;

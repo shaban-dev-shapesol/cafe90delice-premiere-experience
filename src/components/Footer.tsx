@@ -1,12 +1,11 @@
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/cafe_delice_/', label: 'Instagram' },
+    { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61560319606863', label: 'Facebook' },
   ];
 
   const quickLinks = [

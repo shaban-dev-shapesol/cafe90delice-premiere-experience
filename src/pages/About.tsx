@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SocialMediaSection from '@/components/SocialMediaSection';
 import { Heart, Award, Users, Leaf } from 'lucide-react';
 import cafeInterior from '@/assets/cafe-interior.jpg';
 
@@ -148,7 +147,6 @@ const About = () => {
             </div>
           </div>
         </section>
-        <SocialMediaSection />
       </main>
       <Footer />
     </div>

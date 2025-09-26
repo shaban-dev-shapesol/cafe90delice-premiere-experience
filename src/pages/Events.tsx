@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SocialMediaSection from '@/components/SocialMediaSection';
 import { Calendar, Music, Users, Coffee, Phone, Mail } from 'lucide-react';
 
 const Events = () => {
@@ -171,7 +170,6 @@ const Events = () => {
             </div>
           </div>
         </section>
-        <SocialMediaSection />
       </main>
       <Footer />
     </div>

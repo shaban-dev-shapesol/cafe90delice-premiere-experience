@@ -51,24 +51,24 @@ const SocialMediaSection = () => {
     date: '2 weeks ago',
     link: 'https://www.instagram.com/cafe_delice_/'
   }];
-  return <section className="section-padding bg-background">
+  return <section className="section-padding bg-gradient-to-br from-accent to-warm">
       <div className="container-premium">
-        <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl heading-premium mb-6">
+        <div className="text-center mb-16 animate-on-scroll">
+          <h2 className="text-5xl md:text-6xl heading-premium text-foreground mb-8">
             Follow Our Story
           </h2>
-          <p className="text-lg text-premium max-w-2xl mx-auto mb-6">
+          <p className="text-xl text-premium max-w-3xl mx-auto leading-relaxed mb-8">
             Join our community and see the magic we create every day. From intimate celebrations 
-            to grand events, follow along for inspiration.
+            to grand events, follow along for inspiration and behind-the-scenes moments.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-3">
-            <Button className="btn-premium" onClick={() => window.open('https://www.instagram.com/cafe_delice_/', '_blank')}>
-              <Instagram className="w-4 h-4" />
+          <div className="flex justify-center gap-6">
+            <Button className="btn-premium flex items-center gap-3" onClick={() => window.open('https://www.instagram.com/cafe_delice_/', '_blank')}>
+              <Instagram className="w-5 h-5" />
               Follow @cafe_delice_
             </Button>
-            <Button variant="outline" className="btn-outline-premium" onClick={() => window.open('https://www.facebook.com/profile.php?id=61560319606863', '_blank')}>
-              <Facebook className="w-4 h-4" />
+            <Button variant="outline" className="btn-outline-premium flex items-center gap-3" onClick={() => window.open('https://www.facebook.com/profile.php?id=61560319606863', '_blank')}>
+              <Facebook className="w-5 h-5" />
               Like Our Page
             </Button>
           </div>

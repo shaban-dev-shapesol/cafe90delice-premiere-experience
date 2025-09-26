@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <h1 className="text-xl font-semibold text-foreground">
+            <h1 className="text-2xl font-medium text-primary tracking-tight">
               Cafe90Delice
             </h1>
           </Link>

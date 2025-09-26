@@ -18,15 +18,15 @@ const FeaturedSection = () => {
     description: 'A welcoming space where locals and visitors come together to share moments and create connections.',
     image: coffeeHero
   }];
-  return <section className="py-16 bg-muted/30">
-      <div className="container-premium">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">
+  return <section id="featured" className="py-20 bg-gradient-to-br from-background to-accent">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-light tracking-tight text-foreground mb-6 fade-in">
             Why Choose Cafe90Delice
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Great coffee is more than just a beverage—it's a moment of connection 
-            and a celebration of craftsmanship.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed slide-up delay-300">
+            We believe that great coffee is more than just a beverage—it's a moment of connection, 
+            a pause in your day, and a celebration of craftsmanship.
           </p>
         </div>
 

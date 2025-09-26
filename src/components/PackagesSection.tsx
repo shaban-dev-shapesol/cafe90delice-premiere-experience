@@ -82,102 +82,99 @@ const PackagesSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-gradient-to-br from-warm to-background">
       <div className="container-premium">
-        <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl heading-premium mb-6">
+        <div className="text-center mb-20 animate-on-scroll">
+          <h2 className="text-5xl md:text-6xl heading-premium text-foreground mb-8">
             Celebration Packages
           </h2>
-          <p className="text-lg text-premium max-w-2xl mx-auto">
+          <p className="text-xl text-premium max-w-3xl mx-auto leading-relaxed">
             From intimate anniversaries to grand celebrations, we create unforgettable experiences 
-            tailored to your special moments.
+            tailored to your special moments. Let us turn your occasion into a cherished memory.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 mb-16">
           {packages.map((pkg, index) => (
             <div
               key={pkg.id}
               className="package-card animate-on-scroll"
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <pkg.icon className="w-6 h-6 text-primary" />
+              <div className="relative">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center">
+                    <pkg.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold text-foreground mb-2">
+                      {pkg.title}
+                    </h3>
+                    <p className="text-primary font-medium">
+                      {pkg.subtitle}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-foreground mb-1">
-                    {pkg.title}
-                  </h3>
-                  <p className="text-primary text-sm font-medium">
-                    {pkg.subtitle}
-                  </p>
-                </div>
-              </div>
 
-              <p className="text-premium mb-4 text-sm leading-relaxed">
-                {pkg.description}
-              </p>
+                <p className="text-premium mb-6 leading-relaxed">
+                  {pkg.description}
+                </p>
 
-              <div className="grid grid-cols-3 gap-3 mb-4 text-xs">
-                <div className="flex items-center gap-1 text-premium">
-                  <Users className="w-3 h-3 text-primary" />
-                  <span>{pkg.capacity}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-sm">
+                  <div className="flex items-center gap-2 text-premium">
+                    <Users className="w-4 h-4 text-primary" />
+                    {pkg.capacity}
+                  </div>
+                  <div className="flex items-center gap-2 text-premium">
+                    <Calendar className="w-4 h-4 text-primary" />
+                    {pkg.duration}
+                  </div>
+                  <div className="flex items-center gap-2 text-premium">
+                    <Utensils className="w-4 h-4 text-primary" />
+                    {pkg.price}
+                  </div>
                 </div>
-                <div className="flex items-center gap-1 text-premium">
-                  <Calendar className="w-3 h-3 text-primary" />
-                  <span>{pkg.duration}</span>
-                </div>
-                <div className="flex items-center gap-1 text-premium">
-                  <Utensils className="w-3 h-3 text-primary" />
-                  <span>{pkg.price}</span>
-                </div>
-              </div>
 
-              <div className="mb-6">
-                <h4 className="font-medium text-foreground mb-3 text-sm">Package Includes:</h4>
-                <ul className="space-y-1">
-                  {pkg.features.slice(0, 3).map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-premium text-xs">
-                      <div className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
-                      {feature}
-                    </li>
-                  ))}
-                  {pkg.features.length > 3 && (
-                    <li className="text-primary text-xs font-medium">
-                      +{pkg.features.length - 3} more features
-                    </li>
-                  )}
-                </ul>
-              </div>
+                <div className="mb-8">
+                  <h4 className="font-semibold text-foreground mb-4">Package Includes:</h4>
+                  <ul className="space-y-2">
+                    {pkg.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-premium">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-              <div className="flex gap-2">
-                <Button className="flex-1 btn-premium text-sm">
-                  Book Package
-                </Button>
-                <Button variant="outline" className="flex-1 btn-outline-premium text-sm">
-                  Learn More
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <Button className="w-full sm:flex-1 btn-premium hover:scale-105 transition-all duration-300">
+                    Book This Package
+                  </Button>
+                  <Button variant="outline" className="w-full sm:flex-1 btn-outline-premium hover:scale-105 transition-all duration-300">
+                    Learn More
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center card-premium animate-on-scroll">
-          <h3 className="text-2xl font-semibold text-foreground mb-3">
+        <div className="text-center card-premium p-12 animate-on-scroll">
+          <h3 className="text-3xl font-semibold text-foreground mb-4">
             Need Something Custom?
           </h3>
-          <p className="text-premium mb-6 max-w-xl mx-auto text-sm">
+          <p className="text-premium mb-8 max-w-2xl mx-auto leading-relaxed">
             Every celebration is unique. Our team specializes in creating bespoke packages 
-            tailored to your specific needs and vision.
+            tailored to your specific needs, budget, and vision.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button className="btn-gold-premium">
-              <Calendar className="w-4 h-4" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button className="w-full sm:w-auto btn-gold-premium hover:scale-105 transition-all duration-300">
+              <Calendar className="w-5 h-5" />
               Schedule Consultation
             </Button>
-            <Button variant="outline" className="btn-outline-premium">
-              View Gallery
+            <Button variant="outline" className="w-full sm:w-auto btn-outline-premium hover:scale-105 transition-all duration-300">
+              View Package Gallery
             </Button>
           </div>
         </div>

@@ -187,30 +187,7 @@ const Contact = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="relative bg-gradient-to-br from-primary via-primary to-primary-glow text-primary-foreground py-20 overflow-hidden">
-          
-          <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div className="mb-8">
-              <h2 className="text-4xl md:text-5xl font-light tracking-tight mb-6">
-                Get In Touch Today
-              </h2>
-              <p className="text-xl md:text-2xl mb-0 leading-relaxed opacity-90">
-                Have questions or want to make a reservation? 
-                Contact us and we'll get back to you quickly.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:+442012345678" className="group bg-white/10 backdrop-blur-sm text-white border border-white/20 px-10 py-5 rounded-2xl font-medium hover:bg-white hover:text-primary hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl">
-                <Phone className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-lg">Call Now</span>
-              </a>
-              <a href="mailto:hello@cafe90delice.co.uk" className="group bg-white text-primary px-10 py-5 rounded-2xl font-medium hover:bg-white/90 hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl">
-                <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-lg">Send Email</span>
-              </a>
-            </div>
-          </div>
-        </section>
+        
       </main>
       <Footer />
     </div>;

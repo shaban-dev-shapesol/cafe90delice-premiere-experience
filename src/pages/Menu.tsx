@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SocialMediaSection from '@/components/SocialMediaSection';
 import { Coffee, Cake, Sandwich, Wine } from 'lucide-react';
 
 const Menu = () => {
@@ -185,6 +186,7 @@ const Menu = () => {
             </button>
           </div>
         </section>
+        <SocialMediaSection />
       </main>
       <Footer />
     </div>

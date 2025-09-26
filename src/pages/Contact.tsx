@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SocialMediaSection from '@/components/SocialMediaSection';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useState } from 'react';
 const Contact = () => {
@@ -186,8 +187,7 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
-        
+        <SocialMediaSection />
       </main>
       <Footer />
     </div>;

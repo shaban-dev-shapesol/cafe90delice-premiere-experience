@@ -83,13 +83,38 @@ const Contact = () => {
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {info.title}
                   </h3>
-                  <div className="space-y-2">
-                    {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere">
-                        {detail}
-                      </p>
-                    ))}
-                  </div>
+                   <div className="space-y-2">
+                     {info.details.map((detail, idx) => {
+                       // Make phone numbers and emails clickable
+                       if (info.title === 'Call Us' && detail.startsWith('+')) {
+                         return (
+                           <a 
+                             key={idx} 
+                             href={`tel:${detail}`}
+                             className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere hover:text-primary transition-colors duration-200 cursor-pointer"
+                           >
+                             {detail}
+                           </a>
+                         );
+                       }
+                       if (info.title === 'Email Us' && detail.includes('@')) {
+                         return (
+                           <a 
+                             key={idx} 
+                             href={`mailto:${detail}`}
+                             className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere hover:text-primary transition-colors duration-200 cursor-pointer"
+                           >
+                             {detail}
+                           </a>
+                         );
+                       }
+                       return (
+                         <p key={idx} className="text-gray-600 text-sm leading-relaxed break-words overflow-wrap-anywhere">
+                           {detail}
+                         </p>
+                       );
+                     })}
+                   </div>
                 </div>
               ))}
             </div>
@@ -230,6 +255,35 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="bg-primary text-primary-foreground py-16">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-medium mb-6">
+              Get In Touch Today
+            </h2>
+            <p className="text-xl mb-8 leading-relaxed">
+              Have questions or want to make a reservation? 
+              Contact us and we'll get back to you quickly.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+442012345678"
+                className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-medium hover:bg-primary-foreground/90 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
+              <a 
+                href="mailto:hello@cafe90delice.co.uk"
+                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-105 px-8 py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Send Email
+              </a>
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Calendar, Music, Users, Coffee } from 'lucide-react';
+import { Calendar, Music, Users, Coffee, Phone, Mail } from 'lucide-react';
 
 const Events = () => {
   const upcomingEvents = [
@@ -133,9 +133,41 @@ const Events = () => {
                 <p className="text-body-elegant">Art exhibitions, book launches, and performances.</p>
               </div>
             </div>
-            <button className="btn-primary-elegant hover:scale-105 transition-all duration-300">
+            <a 
+              href="mailto:reservations@cafe90delice.co.uk"
+              className="btn-primary-elegant hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+            >
+              <Mail className="w-5 h-5" />
               Inquire About Private Events
-            </button>
+            </a>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="bg-primary text-primary-foreground py-16">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-medium mb-6">
+              Ready to Join Our Events?
+            </h2>
+            <p className="text-xl mb-8 leading-relaxed">
+              Reserve your spot at our upcoming events or inquire about hosting your own private event.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+442012345678"
+                className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-medium hover:bg-primary-foreground/90 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call to Book
+              </a>
+              <a 
+                href="mailto:reservations@cafe90delice.co.uk"
+                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:scale-105 px-8 py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Event Inquiry
+              </a>
+            </div>
           </div>
         </section>
       </main>

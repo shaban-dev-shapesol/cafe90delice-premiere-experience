@@ -3,34 +3,31 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 30 15% 97%;
-    --foreground: 20 14.3% 4.1%;
+:root {
+    --background: 0 0% 100%;
+    --foreground: 15 23% 25%;
     --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
+    --card-foreground: 15 23% 25%;
     --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 165 40% 60%;
+    --popover-foreground: 15 23% 25%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 165 45% 70%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 60 4.8% 95.9%;
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 165 40% 60%;
-    --gold: 43 74% 66%;
-    --gold-foreground: 26 83.3% 14.1%;
-    --charcoal: 220 13% 18%;
-    --charcoal-foreground: 60 9.1% 97.8%;
-    --cream: 30 50% 98%;
-    --warm: 25 25% 95%;
-    --radius: 0.75rem;
+    --primary-glow: 217 91% 70%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 15 23% 25%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 15 23% 50%;
+    --accent: 210 40% 98%;
+    --accent-foreground: 15 23% 25%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    --gold: 45 93% 58%;
+    --gold-foreground: 15 23% 25%;
+    --warm: 210 40% 98%;
+    --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 25 5.3% 44.7%;
     --sidebar-primary: 24 9.8% 10%;

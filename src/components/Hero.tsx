@@ -44,32 +44,32 @@ const Hero = () => {
             }`}
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50"></div>
           </div>
         ))}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white section-padding">
+      <div className="relative z-10 text-center text-white px-6">
         <div className="container-premium">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl heading-premium mb-8 text-shadow animate-fade-in-up">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 text-shadow animate-fade-in-up">
               Cafe90Delice
             </h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-light mb-6 text-shadow animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium mb-4 text-shadow animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {slides[currentSlide].title}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up px-4" style={{ animationDelay: '0.4s' }}>
+            <p className="text-lg sm:text-xl mb-10 text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               {slides[currentSlide].subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-4" style={{ animationDelay: '0.6s' }}>
-              <button className="w-full sm:w-auto btn-premium hover:scale-105 transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+              <button className="btn-premium">
                 Discover Our Story
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </button>
-              <button className="w-full sm:w-auto glass-effect text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:scale-105 flex items-center justify-center gap-3">
-                <Play className="w-5 h-5" />
+              <button className="glass-effect text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white/20 flex items-center justify-center gap-2">
+                <Play className="w-4 h-4" />
                 Watch Our Story
               </button>
             </div>

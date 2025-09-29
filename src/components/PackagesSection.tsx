@@ -1,5 +1,6 @@
 import { Calendar, Users, Utensils, Gift, Building, Heart, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const PackagesSection = () => {
   const packages = [
@@ -151,8 +152,8 @@ const PackagesSection = () => {
                   <Button className="w-full sm:flex-1 btn-premium hover:scale-105 transition-all duration-300">
                     Book This Package
                   </Button>
-                  <Button variant="outline" className="w-full sm:flex-1 btn-outline-premium hover:scale-105 transition-all duration-300">
-                    Learn More
+                  <Button asChild variant="outline" className="w-full sm:flex-1 btn-outline-premium hover:scale-105 transition-all duration-300">
+                    <Link to="/packages">Learn More</Link>
                   </Button>
                 </div>
               </div>

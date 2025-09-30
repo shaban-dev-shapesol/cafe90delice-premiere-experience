@@ -7,6 +7,7 @@ import FAQs from '@/components/FAQs';
 import PackagesSection from '@/components/PackagesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import SocialMediaSection from '@/components/SocialMediaSection';
+import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -41,6 +42,7 @@ const Index = () => {
         <TestimonialsSection />
         <FAQs />
         <SocialMediaSection />
+        <CTASection />
       </main>
       <Footer />
     </div>

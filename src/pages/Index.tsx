@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import TopHeader from '@/components/TopHeader';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import FeaturedSection from '@/components/FeaturedSection';
@@ -33,6 +34,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <TopHeader />
       <Navbar />
       <main>
         <Hero />

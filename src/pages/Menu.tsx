@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Coffee, Cake, Sandwich, Wine } from 'lucide-react';
 
 const Menu = () => {
@@ -131,43 +132,58 @@ const Menu = () => {
           </div>
         </section>
 
-        {/* Menu Categories */}
+        {/* Menu Categories with Tabs */}
         <section className="py-20 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            {menuCategories.map((category, categoryIndex) => (
-              <div key={category.title} className="mb-16 last:mb-0">
-                <div className="text-center mb-12">
-                  <div className="flex justify-center mb-4">
-                    <category.icon className="w-12 h-12 text-primary" />
-                  </div>
-                  <h2 className="text-3xl font-medium text-foreground tracking-tight">
+            <Tabs defaultValue={menuCategories[0].title} className="w-full">
+              <TabsList className="w-full flex flex-wrap justify-center mb-12 h-auto gap-2 bg-muted/50 p-2">
+                {menuCategories.map((category) => (
+                  <TabsTrigger
+                    key={category.title}
+                    value={category.title}
+                    className="flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  >
+                    <category.icon className="w-4 h-4" />
                     {category.title}
-                  </h2>
-                </div>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {category.items.map((item, itemIndex) => (
-                    <div
-                      key={item.name}
-                      className="card-elegant p-6 hover-lift"
-                      style={{ animationDelay: `${(categoryIndex * 200) + (itemIndex * 100)}ms` }}
-                    >
-                      <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-xl font-medium text-foreground">
-                          {item.name}
-                        </h3>
-                        <span className="text-lg font-medium text-primary">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-body-elegant">
-                        {item.description}
-                      </p>
+              {menuCategories.map((category, categoryIndex) => (
+                <TabsContent key={category.title} value={category.title} className="mt-0">
+                  <div className="text-center mb-12">
+                    <div className="flex justify-center mb-4">
+                      <category.icon className="w-12 h-12 text-primary" />
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+                    <h2 className="text-3xl font-medium text-foreground tracking-tight">
+                      {category.title}
+                    </h2>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {category.items.map((item, itemIndex) => (
+                      <div
+                        key={item.name}
+                        className="card-elegant p-6 hover-lift"
+                        style={{ animationDelay: `${itemIndex * 50}ms` }}
+                      >
+                        <div className="flex justify-between items-start mb-3">
+                          <h3 className="text-xl font-medium text-foreground">
+                            {item.name}
+                          </h3>
+                          <span className="text-lg font-medium text-primary">
+                            {item.price}
+                          </span>
+                        </div>
+                        <p className="text-body-elegant">
+                          {item.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </TabsContent>
+              ))}
+            </Tabs>
           </div>
         </section>
 

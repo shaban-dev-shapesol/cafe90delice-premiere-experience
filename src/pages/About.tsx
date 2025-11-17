@@ -1,32 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Heart, Award, Users, Leaf } from 'lucide-react';
 import cafeInterior from '@/assets/cafe-interior.jpg';
 
 const About = () => {
-  const values = [
-    {
-      icon: Heart,
-      title: 'Passion for Excellence',
-      description: 'Every cup is crafted with dedication and attention to detail, ensuring exceptional quality in every sip.'
-    },
-    {
-      icon: Award,
-      title: 'Premium Quality',
-      description: 'We source only the finest beans and ingredients, working with trusted suppliers who share our commitment to quality.'
-    },
-    {
-      icon: Users,
-      title: 'Community Focus',
-      description: 'Building connections and creating a welcoming space where everyone feels at home is at the heart of what we do.'
-    },
-    {
-      icon: Leaf,
-      title: 'Sustainable Practices',
-      description: 'We are committed to environmental responsibility, supporting fair trade and implementing eco-friendly practices.'
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -57,27 +33,24 @@ const About = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-3xl font-medium text-foreground mb-8 text-center">
-                Where It All Began
+                The Story Behind Café 90 Délice
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="text-body-elegant space-y-6">
                   <p>
-                    Founded in 2018, Cafe90Delice emerged from a simple yet profound vision: 
-                    to create a space where exceptional coffee meets genuine human connection. 
-                    Our founders, passionate about the art of coffee and the warmth of community, 
-                    set out to establish more than just a café.
+                    Café 90 Délice was born from Fatima's lifelong love of flavour, hospitality, and Parisian elegance. 
+                    Growing up in Paris, she was surrounded by the artistry of fresh pastries, rich coffee, and warm café 
+                    culture — experiences that shaped her vision and passion.
                   </p>
                   <p>
-                    Located in the heart of the UK, we have become a beloved gathering place 
-                    for coffee enthusiasts, remote workers, friends catching up, and anyone 
-                    seeking a moment of respite in their day. Our commitment to quality extends 
-                    beyond our beverages to every aspect of the experience we provide.
+                    When she moved to Manchester, Fatima dreamed of bringing a slice of Paris to the city. Inspired by 
+                    the beauty of canal-side living and the vibrant local community, she created a space where people could 
+                    enjoy authentic flavours, relaxed atmosphere, and exceptional service — all in one elegant setting.
                   </p>
                   <p>
-                    From our carefully sourced beans to our thoughtfully designed space, 
-                    every element reflects our dedication to creating something truly special. 
-                    We believe that great coffee is an art form, and our skilled baristas 
-                    are the artists who bring this vision to life.
+                    Every detail of the café reflects her dedication: from the golden tones and Tiffany blue palette to 
+                    the carefully curated menu and welcoming vibe. It's more than just coffee — it's a celebration of taste, 
+                    tradition, and timeless style.
                   </p>
                 </div>
                 <div className="order-first md:order-last">
@@ -93,37 +66,20 @@ const About = () => {
         </section>
 
         {/* Values Section */}
+        {/* Fatima's Vision Section */}
         <section className="py-20 bg-accent">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-medium text-foreground mb-6">
-                Our Values
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                These principles guide everything we do, from selecting our beans 
-                to creating memorable experiences for our guests.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="card-elegant p-6 text-center hover-lift fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                  <div className="flex justify-center mb-4">
-                    <value.icon className="w-12 h-12 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-medium text-foreground mb-4">
-                    {value.title}
-                  </h3>
-                  <p className="text-body-elegant">
-                    {value.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-medium text-foreground mb-6">
+              A Vision Brought to Life
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              From the golden tones inspired by Parisian cafés to the calming Tiffany blue accents, 
+              every element of Café 90 Délice tells a story. It's a place where French elegance meets 
+              Manchester's warmth — where every visit feels like a journey to Paris, right by the canal.
+            </p>
+            <p className="text-xl font-light text-foreground/90 italic">
+              "It's more than just coffee — it's a celebration of taste, tradition, and timeless style."
+            </p>
           </div>
         </section>
 

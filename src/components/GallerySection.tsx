@@ -2,6 +2,7 @@ import coffeeCup from '@/assets/coffee-cup-logo.jpg';
 import tiffanyBag from '@/assets/tiffany-bag-logo.jpg';
 import dessertCounter from '@/assets/dessert-counter.jpg';
 import cafeSeating from '@/assets/cafe-seating.jpg';
+import cakesDisplay from '@/assets/cakes-display.jpg';
 
 const GallerySection = () => {
   return (
@@ -66,6 +67,23 @@ const GallerySection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-accent/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-foreground">
                   <h3 className="text-lg font-medium">Elegant Packaging</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Cakes Display */}
+          <div className="animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-350">
+            <div className="group relative overflow-hidden rounded-xl shadow-[var(--shadow-elegant)] aspect-square bg-muted">
+              <img 
+                src={cakesDisplay} 
+                alt="Artisan cakes and pastries display at Café 90 Délice"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-primary-foreground">
+                  <h3 className="text-lg font-medium">Artisan Cakes</h3>
                 </div>
               </div>
             </div>

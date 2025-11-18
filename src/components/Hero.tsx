@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import dessertCounter from '@/assets/dessert-counter.jpg';
+import heroCafeSpread from '@/assets/hero-cafe-spread.jpg';
 
 const Hero = () => {
 
@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${dessertCounter})` }}
+          style={{ backgroundImage: `url(${heroCafeSpread})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
         </div>

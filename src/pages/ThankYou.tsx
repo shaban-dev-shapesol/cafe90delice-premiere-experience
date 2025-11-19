@@ -11,7 +11,7 @@ const ThankYou = () => {
       <TopHeader />
       <Navbar />
       
-      <main className="flex-1 flex items-center justify-center py-20 px-4">
+      <main className="flex-1 flex items-center justify-center px-4">
         <div className="max-w-2xl w-full">
           <div className="bg-card border border-border rounded-lg shadow-lg p-12 text-center space-y-6 animate-fade-in">
             <div className="flex justify-center">

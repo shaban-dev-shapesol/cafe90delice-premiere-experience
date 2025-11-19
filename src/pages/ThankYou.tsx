@@ -7,46 +7,40 @@ import Footer from '@/components/Footer';
 
 const ThankYou = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <TopHeader />
       <Navbar />
       
-      <main className="flex-1 flex items-center justify-center py-16 px-4">
-        <div className="max-w-2xl w-full text-center space-y-8 animate-on-scroll">
-          <div className="flex justify-center">
-            <CheckCircle className="w-24 h-24 text-primary" />
-          </div>
-          
-          <div className="space-y-4">
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground">
-              Thank You!
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              We've received your message and will get back to you as soon as possible. 
-              We look forward to serving you at Café 90 Délice.
-            </p>
-          </div>
+      <main className="flex-1 flex items-center justify-center py-20 px-4">
+        <div className="max-w-2xl w-full">
+          <div className="bg-card border border-border rounded-lg shadow-lg p-12 text-center space-y-6 animate-fade-in">
+            <div className="flex justify-center">
+              <div className="w-20 h-20 rounded-full border-4 border-primary flex items-center justify-center">
+                <CheckCircle className="w-10 h-10 text-primary" strokeWidth={3} />
+              </div>
+            </div>
+            
+            <div className="space-y-3">
+              <h1 className="font-heading text-4xl font-bold text-foreground">
+                Thank You!
+              </h1>
+              <p className="text-muted-foreground max-w-md mx-auto">
+                Your message has been received. We'll get back to you within 24 hours.
+              </p>
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Button asChild size="lg">
-              <Link to="/">
-                Return to Home
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/menu">
-                View Our Menu
-              </Link>
-            </Button>
-          </div>
-
-          <div className="pt-12 border-t border-border/50 max-w-md mx-auto">
-            <p className="text-sm text-muted-foreground">
-              Have questions? Call us at{' '}
-              <a href="tel:+441615555555" className="text-primary hover:underline">
-                (0161) 555-5555
-              </a>
-            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
+              <Button asChild size="lg" className="min-w-[160px]">
+                <Link to="/">
+                  Back to Home
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="min-w-[160px]">
+                <Link to="/menu">
+                  View Menu
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </main>

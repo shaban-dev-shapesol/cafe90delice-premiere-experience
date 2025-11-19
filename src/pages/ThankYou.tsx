@@ -11,31 +11,31 @@ const ThankYou = () => {
       <TopHeader />
       <Navbar />
       
-      <main className="flex-1 flex items-center justify-center px-4">
-        <div className="max-w-2xl w-full">
-          <div className="bg-card border border-border rounded-lg shadow-lg p-12 text-center space-y-6 animate-fade-in">
+      <main className="flex-1 flex items-center justify-center px-4 bg-gradient-to-b from-background to-muted/20">
+        <div className="max-w-xl w-full">
+          <div className="bg-card/80 backdrop-blur-sm border-0 rounded-2xl shadow-xl p-8 sm:p-12 text-center space-y-8 animate-fade-in">
             <div className="flex justify-center">
-              <div className="w-20 h-20 rounded-full border-4 border-primary flex items-center justify-center">
-                <CheckCircle className="w-10 h-10 text-primary" strokeWidth={3} />
+              <div className="w-24 h-24 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center">
+                <CheckCircle className="w-14 h-14 text-primary" strokeWidth={2.5} />
               </div>
             </div>
             
-            <div className="space-y-3">
-              <h1 className="font-heading text-4xl font-bold text-foreground">
+            <div className="space-y-4">
+              <h1 className="font-heading text-4xl sm:text-5xl font-bold text-foreground">
                 Thank You!
               </h1>
-              <p className="text-muted-foreground max-w-md mx-auto">
+              <p className="text-lg text-muted-foreground max-w-md mx-auto leading-relaxed">
                 Your message has been received. We'll get back to you within 24 hours.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-              <Button asChild size="lg" className="min-w-[160px]">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+              <Button asChild size="lg" className="min-w-[160px] shadow-md hover:shadow-lg transition-shadow">
                 <Link to="/">
                   Back to Home
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="min-w-[160px]">
+              <Button asChild variant="outline" size="lg" className="min-w-[160px] border-2 hover:bg-primary/5">
                 <Link to="/menu">
                   View Menu
                 </Link>

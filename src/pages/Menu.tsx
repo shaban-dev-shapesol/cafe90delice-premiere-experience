@@ -6,8 +6,49 @@ import { Card, CardContent } from "@/components/ui/card";
 import SocialMediaSection from "@/components/SocialMediaSection";
 import { useEffect } from "react";
 import TopHeader from "@/components/TopHeader";
-import cafeInterior from "@/assets/cafe-interior.jpg";
-// import Seo from "@/components/Seo";
+
+// Import menu images
+import painAuChocolat from "@/assets/menu/pain-au-chocolat-1.jpg";
+import croissantCreamTower from "@/assets/menu/croissant-cream-tower.jpg";
+import croissantPlain from "@/assets/menu/croissant-plain-1.jpg";
+import croissantBerriesTower from "@/assets/menu/croissant-tower-berries-1.jpg";
+import croissantSandwich from "@/assets/menu/croissant-sandwich.jpg";
+import cakeRedVelvet from "@/assets/menu/cake-red-velvet-1.jpg";
+import cakeChocolateMousse from "@/assets/menu/cake-chocolate-mousse-1.jpg";
+import cakePistachio from "@/assets/menu/cake-pistachio-drip-1.jpg";
+import cakeCaramel from "@/assets/menu/cake-caramel-1.jpg";
+import cakeVanilla from "@/assets/menu/cake-vanilla-pearl-1.jpg";
+import cakeFerrero from "@/assets/menu/cake-ferrero-1.jpg";
+import cakeLemonBundt from "@/assets/menu/cake-lemon-bundt-1.jpg";
+import cakeMarbleBundt from "@/assets/menu/cake-marble-bundt.jpg";
+import cakeStrawberryBundt from "@/assets/menu/cake-strawberry-bundt-action-1.jpg";
+import cheesecakeOreo from "@/assets/menu/cheesecake-oreo-1.jpg";
+import cheesecakeStrawberry from "@/assets/menu/cheesecake-strawberry.jpg";
+import eclairChocolate from "@/assets/menu/eclair-chocolate.jpg";
+import dessertTiramisu from "@/assets/menu/dessert-tiramisu-mini.jpg";
+import dessertVanillaNapoleon from "@/assets/menu/dessert-vanilla-napoleon-1.jpg";
+import tartStrawberry from "@/assets/menu/tart-strawberry-1.jpg";
+import tartMixedBerries from "@/assets/menu/tart-mixed-berries-1.jpg";
+import pavlovaMixedFruit from "@/assets/menu/pavlova-mixed-fruit-1.jpg";
+import donutChocolate from "@/assets/menu/donut-chocolate.jpg";
+import donutOreo from "@/assets/menu/donut-oreo-1.jpg";
+import donutCrumbCaramel from "@/assets/menu/donut-crumb-caramel-action-1.jpg";
+import cookieChocolateChip from "@/assets/menu/cookie-chocolate-chip-1.jpg";
+import cookieRedVelvet from "@/assets/menu/cookie-red-velvet-white-chocolate.jpg";
+import cupcakeCherry from "@/assets/menu/cupcake-cherry-1.jpg";
+import cupcakeCream from "@/assets/menu/cupcake-cream.jpg";
+import meringueStrawberry from "@/assets/menu/meringue-strawberry-1.jpg";
+import lattePistachio from "@/assets/menu/latte-pistachio-1.jpg";
+import cappuccinoLatteArt from "@/assets/menu/cappuccino-latte-art-1.jpg";
+import hotChocolate from "@/assets/menu/hot-chocolate-1.jpg";
+import teaMoroccan from "@/assets/menu/tea-moroccan-set-1.jpg";
+import teaSetFlowers from "@/assets/menu/tea-set-flowers-1.jpg";
+import latteMatchaStrawberry from "@/assets/menu/latte-matcha-strawberry-1.jpg";
+import drinkMintLime from "@/assets/menu/drink-mint-lime-1.jpg";
+import drinkOrangeGradient from "@/assets/menu/drink-orange-gradient-1.jpg";
+import drinkBlueGradient from "@/assets/menu/drink-blue-gradient-ice-action.jpg";
+import milkshakeChocolate from "@/assets/menu/milkshake-chocolate-1.jpg";
+import milkshakeStrawberry from "@/assets/menu/milkshake-strawberry-1.jpg";
 const Menu = () => {
   const menuCategories = [
     {

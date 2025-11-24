@@ -2,32 +2,36 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+import lattePistachio from '@/assets/menu/latte-pistachio-1.jpg';
+import donutChocolate from '@/assets/menu/donut-chocolate.jpg';
+import cappuccinoLatteArt from '@/assets/menu/cappuccino-latte-art-1.jpg';
+import meringueStrawberry from '@/assets/menu/meringue-strawberry-1.jpg';
 
 const MenuPreview = () => {
   const featuredItems = [
     {
-      name: 'Dragon Coffee',
-      price: '£4.00',
-      description: 'Cloudy & Spicy coffee creation',
-      image: '/placeholder.svg'
+      name: 'Pistachio Latte',
+      price: '£5.50',
+      description: 'Creamy pistachio latte with delicate foam',
+      image: lattePistachio
     },
     {
-      name: 'Chocolate Churros',
-      price: '£7.00',
-      description: 'Crispy churros with chocolate dipping sauces',
-      image: '/placeholder.svg'
+      name: 'Chocolate Donut',
+      price: '£4.90',
+      description: 'Indulgent chocolate donut with rich glaze',
+      image: donutChocolate
     },
     {
-      name: 'Affogato Double Shot',
-      price: '£3.00',
-      description: 'Double espresso shot over vanilla ice cream',
-      image: '/placeholder.svg'
+      name: 'Cappuccino',
+      price: '£3.90',
+      description: 'Classic cappuccino with beautiful latte art',
+      image: cappuccinoLatteArt
     },
     {
-      name: 'Lemon Meringue Pie',
-      price: '£6.50',
-      description: 'Tangy lemon pie with fluffy meringue topping',
-      image: '/placeholder.svg'
+      name: 'Strawberry Meringue',
+      price: '£6.70',
+      description: 'Light meringue with fresh strawberries',
+      image: meringueStrawberry
     }
   ];
 

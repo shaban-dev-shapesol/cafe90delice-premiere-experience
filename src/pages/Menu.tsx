@@ -7,7 +7,7 @@ import SocialMediaSection from "@/components/SocialMediaSection";
 import { useEffect } from "react";
 import TopHeader from "@/components/TopHeader";
 import cafeInterior from "@/assets/cafe-interior.jpg";
-import Seo from "@/components/Seo";
+// import Seo from "@/components/Seo";
 const Menu = () => {
   const menuCategories = [
     {
@@ -252,10 +252,10 @@ const Menu = () => {
 
   return (
     <>
-      <Seo
+      {/* <Seo
         title="Explore Our Signature Coffee Menu"
         description="Browse our handcrafted coffee blends, fresh bakes, and seasonal favourites."
-      />
+      /> */}
       <div className="min-h-screen bg-background">
         <TopHeader />
         <Navbar />

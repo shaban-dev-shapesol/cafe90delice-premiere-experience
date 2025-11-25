@@ -24,7 +24,7 @@ const Contact = () => {
   const contactInfo = [{
     icon: MapPin,
     title: 'Visit Us',
-    details: ['123 High Street', 'Manchester, M1 1AA', 'United Kingdom']
+    details: ['3-5 Keepers Quay', 'Ancoats, Manchester M4 6GL', 'United Kingdom']
   }, {
     icon: Phone,
     title: 'Call Us',
@@ -160,7 +160,7 @@ const Contact = () => {
                       Interactive map will be displayed here
                     </p>
                     <p className="text-sm text-muted-foreground mt-2">
-                      123 High Street, Manchester, M1 1AA
+                      3-5 Keepers Quay, Ancoats, Manchester M4 6GL
                     </p>
                   </div>
                 </div>

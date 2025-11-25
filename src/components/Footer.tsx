@@ -67,8 +67,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 High Street<br />
-                  Manchester, M1 1AA<br />
+                  3-5 Keepers Quay<br />
+                  Ancoats, Manchester M4 6GL<br />
                   United Kingdom
                 </span>
               </div>

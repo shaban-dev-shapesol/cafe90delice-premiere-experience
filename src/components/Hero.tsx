@@ -1,9 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import heroCafeSpread from '@/assets/hero-cafe-spread.jpg';
 
 const Hero = () => {
+  const scrollToMenu = () => {
+    const menuSection = document.getElementById('menu-preview');
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -32,11 +37,9 @@ const Hero = () => {
             </p>
             
             <div className="flex justify-center animate-fade-in-up px-4" style={{ animationDelay: '0.6s' }}>
-              <Button asChild className="btn-premium hover:scale-105 transition-all duration-300">
-                <Link to="/menu">
-                  Explore Our Menu
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+              <Button onClick={scrollToMenu} className="btn-premium hover:scale-105 transition-all duration-300">
+                Explore Our Menu
+                <ArrowRight className="w-5 h-5" />
               </Button>
             </div>
           </div>

@@ -36,7 +36,7 @@ const MenuPreview = () => {
   ];
 
   return (
-    <section className="section-padding bg-background animate-on-scroll">
+    <section id="menu-preview" className="section-padding bg-background animate-on-scroll">
       <div className="container-premium">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl heading-premium mb-6">

@@ -7,7 +7,7 @@ import SocialMediaSection from "@/components/SocialMediaSection";
 import { useEffect } from "react";
 import TopHeader from "@/components/TopHeader";
 // Import menu images
-import painAuChocolat from "@/assets/menu/pain-au-chocolat-1.jpg";
+import painAuChocolat from "@/assets/menu/pain-au-chocolat-updated.jpg";
 import croissantPlain from "@/assets/menu/croissant-plain-1.jpg";
 import croissantTowerBerries from "@/assets/menu/croissant-tower-berries-1.jpg";
 import croissantCreamTower from "@/assets/menu/croissant-cream-tower.jpg";

@@ -15,7 +15,9 @@ import croissantMiniPlain from "@/assets/menu/croissant-mini-plain.jpg";
 import croissantSandwich from "@/assets/menu/croissant-sandwich.jpg";
 import cakeRedVelvet from "@/assets/menu/cake-red-velvet-1.jpg";
 import cakeRedVelvetBerries from "@/assets/menu/cake-red-velvet-berries-1.jpg";
+import cakeRedVelvet5 from "@/assets/menu/cake-red-velvet-5.jpg";
 import cakeChocolateMousse from "@/assets/menu/cake-chocolate-mousse-1.jpg";
+import cakeFerrero4 from "@/assets/menu/cake-ferrero-4.jpg";
 import cakeChocolateDrip from "@/assets/menu/cake-chocolate-drip-1.jpg";
 import cakeCaramel from "@/assets/menu/cake-caramel-1.jpg";
 import cakeFerrero from "@/assets/menu/cake-ferrero-1.jpg";
@@ -175,9 +177,9 @@ const Menu = () => {
       icon: Cake,
       title: "SPECIAL PARTY CAKES",
       items: [
-        { name: "Red Velvet", price: "£75.00", description: "", image: cakeRedVelvetBerries },
+        { name: "Red Velvet", price: "£75.00", description: "", image: cakeRedVelvet5 },
         { name: "Pistachio", price: "£80.00", description: "", image: cakePistachioDrip },
-        { name: "Chocolate", price: "£75.00", description: "", image: cakeChocolateMousse },
+        { name: "Chocolate", price: "£75.00", description: "", image: cakeFerrero4 },
         { name: "Biscoff", price: "£75.00", description: "", image: cakeCaramel },
         { name: "Kunafa Chocolate", price: "£80.00", description: "", image: cakeChocolateDrip },
         { name: "Vanilla & Strawberry", price: "£75.00", description: "", image: cakeVanillaPearl },

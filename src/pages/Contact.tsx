@@ -36,7 +36,7 @@ const Contact = () => {
   }, {
     icon: Clock,
     title: 'Opening Hours',
-    details: ['Mon-Fri: 7:00 AM - 8:00 PM', 'Sat-Sun: 8:00 AM - 9:00 PM']
+    details: ['Mon-Sun: 9:00 AM - 7:00 PM']
   }];
   return <div className="min-h-screen">
       <Navbar />

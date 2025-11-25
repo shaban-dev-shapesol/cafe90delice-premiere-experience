@@ -17,7 +17,7 @@ const TopHeader = () => {
             </a>
             <div className="flex items-center space-x-2">
               <Clock size={14} />
-              <span className="hidden lg:inline">Mon-Sun: 7am - 10pm</span>
+              <span className="hidden lg:inline">Mon-Sun: 9am - 7pm</span>
             </div>
           </div>
 

@@ -12,7 +12,7 @@ const SocialMediaSection = () => {
   const instagramPosts = [{
     id: 1,
     image: redVelvetBerries,
-    caption: 'Delicious treats and premium coffee at Cafe90Delice ☕ #Cafe90Delice #PremiumCoffee #Manchester',
+    caption: 'Our signature Red Velvet Cake with fresh berries - a customer favorite! 🍰❤️ #RedVelvetCake #Cafe90Delice #Manchester',
     likes: 145,
     comments: 18,
     date: '3 days ago',
@@ -20,7 +20,7 @@ const SocialMediaSection = () => {
   }, {
     id: 2,
     image: pistachioLatte,
-    caption: 'Fresh pastries and artisan coffee - the perfect combination! 🥐 #FreshPastries #ArtisanCoffee',
+    caption: 'Pistachio Latte perfection with that signature sprinkle ✨☕ #PistachioLatte #SpecialtyCoffee #ArtisanDrinks',
     likes: 123,
     comments: 15,
     date: '5 days ago',
@@ -28,7 +28,7 @@ const SocialMediaSection = () => {
   }, {
     id: 3,
     image: croissantTower,
-    caption: 'Beautiful café atmosphere at Cafe90Delice ✨ #CafeVibes #Manchester #Coffee',
+    caption: 'Tower of indulgence! Our stunning croissant creation with fresh berries 🥐🍓 #CroissantTower #PastryArt #CafeVibes',
     likes: 167,
     comments: 22,
     date: '1 week ago',
@@ -36,7 +36,7 @@ const SocialMediaSection = () => {
   }, {
     id: 4,
     image: cafeSeating,
-    caption: 'Professional photography session at our beautiful café 📸 #CafePhotography #ProfessionalShoot',
+    caption: 'Cozy seating and elegant vibes - the perfect spot to relax and enjoy ✨ #CafeInterior #Manchester #RelaxAndUnwind',
     likes: 189,
     comments: 28,
     date: '1 week ago',
@@ -44,7 +44,7 @@ const SocialMediaSection = () => {
   }, {
     id: 5,
     image: cappuccinoHands,
-    caption: 'Birthday celebrations made special at Cafe90Delice 🎂 #BirthdayParty #SpecialCelebrations',
+    caption: 'Beautiful latte art made with love, served with a smile ☕💛 #LatteArt #CoffeeLover #HandCrafted',
     likes: 201,
     comments: 31,
     date: '2 weeks ago',
@@ -52,7 +52,7 @@ const SocialMediaSection = () => {
   }, {
     id: 6,
     image: donutHands,
-    caption: 'Cozy corner for intimate gatherings and meetings ☕ #IntimateSpace #BusinessMeetings',
+    caption: 'Chocolate dreams in every bite! Our decadent chocolate donuts 🍩🍫 #ChocolateDonut #SweetTreats #DessertGoals',
     likes: 156,
     comments: 19,
     date: '2 weeks ago',

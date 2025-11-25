@@ -23,6 +23,8 @@ import cakeCaramel from "@/assets/menu/cake-caramel-1.jpg";
 import cakeFerrero from "@/assets/menu/cake-ferrero-1.jpg";
 import cakeBiscoff from "@/assets/menu/cake-biscoff-drip.jpg";
 import cakeKunafaChocolate from "@/assets/menu/cake-kunafa-chocolate.jpg";
+import cakeCarrotGenerated from "@/assets/menu/cake-carrot-generated.jpg";
+import cakeVanillaStrawberryGenerated from "@/assets/menu/cake-vanilla-strawberry-generated.jpg";
 import cheesecakeOreo from "@/assets/menu/cheesecake-oreo-1.jpg";
 import cheesecakeStrawberry from "@/assets/menu/cheesecake-strawberry.jpg";
 import cakePistachioChocolateDrip from "@/assets/menu/cake-pistachio-chocolate-drip.jpg";
@@ -184,8 +186,8 @@ const Menu = () => {
         { name: "Chocolate", price: "£75.00", description: "", image: cakeFerrero4 },
         { name: "Biscoff", price: "£75.00", description: "", image: cakeBiscoff },
         { name: "Kunafa Chocolate", price: "£80.00", description: "", image: cakeKunafaChocolate },
-        { name: "Vanilla & Strawberry", price: "£75.00", description: "", image: cakeVanillaPearl },
-        { name: "Carrot Cake", price: "£75.00", description: "", image: cakeFerrero },
+        { name: "Vanilla & Strawberry", price: "£75.00", description: "", image: cakeVanillaStrawberryGenerated },
+        { name: "Carrot Cake", price: "£75.00", description: "", image: cakeCarrotGenerated },
       ],
     },
     {

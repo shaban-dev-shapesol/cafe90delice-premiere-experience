@@ -1,10 +1,17 @@
 import { Instagram, Facebook, Heart, MessageCircle, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import redVelvetBerries from '@/assets/menu/cake-red-velvet-berries-person.jpg';
+import pistachioLatte from '@/assets/menu/latte-pistachio-sprinkle-1.jpg';
+import croissantTower from '@/assets/menu/croissant-tower-berries-person-1.jpg';
+import cafeSeating from '@/assets/cafe-seating.jpg';
+import cappuccinoHands from '@/assets/menu/cappuccino-latte-art-hands.jpg';
+import donutHands from '@/assets/menu/donut-chocolate-hands-1.jpg';
+
 const SocialMediaSection = () => {
   // Real Instagram posts data from Cafe90Delice
   const instagramPosts = [{
     id: 1,
-    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/IMG_8980-768x1024.jpeg',
+    image: redVelvetBerries,
     caption: 'Delicious treats and premium coffee at Cafe90Delice ☕ #Cafe90Delice #PremiumCoffee #Manchester',
     likes: 145,
     comments: 18,
@@ -12,7 +19,7 @@ const SocialMediaSection = () => {
     link: 'https://www.instagram.com/cafe_delice_/'
   }, {
     id: 2,
-    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/441C01F5-5CD9-4A7C-982F-6EF12441F86C-768x1024.jpeg',
+    image: pistachioLatte,
     caption: 'Fresh pastries and artisan coffee - the perfect combination! 🥐 #FreshPastries #ArtisanCoffee',
     likes: 123,
     comments: 15,
@@ -20,7 +27,7 @@ const SocialMediaSection = () => {
     link: 'https://www.instagram.com/cafe_delice_/'
   }, {
     id: 3,
-    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/IMG_0445-768x1024.jpeg',
+    image: croissantTower,
     caption: 'Beautiful café atmosphere at Cafe90Delice ✨ #CafeVibes #Manchester #Coffee',
     likes: 167,
     comments: 22,
@@ -28,7 +35,7 @@ const SocialMediaSection = () => {
     link: 'https://www.instagram.com/cafe_delice_/'
   }, {
     id: 4,
-    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-118.jpg',
+    image: cafeSeating,
     caption: 'Professional photography session at our beautiful café 📸 #CafePhotography #ProfessionalShoot',
     likes: 189,
     comments: 28,
@@ -36,7 +43,7 @@ const SocialMediaSection = () => {
     link: 'https://www.instagram.com/cafe_delice_/'
   }, {
     id: 5,
-    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-156.jpg',
+    image: cappuccinoHands,
     caption: 'Birthday celebrations made special at Cafe90Delice 🎂 #BirthdayParty #SpecialCelebrations',
     likes: 201,
     comments: 31,
@@ -44,7 +51,7 @@ const SocialMediaSection = () => {
     link: 'https://www.instagram.com/cafe_delice_/'
   }, {
     id: 6,
-    image: 'https://cafe90delice.co.uk/wp-content/uploads/2025/07/CRAYDENPHOTOGRAPHY-148.jpg',
+    image: donutHands,
     caption: 'Cozy corner for intimate gatherings and meetings ☕ #IntimateSpace #BusinessMeetings',
     likes: 156,
     comments: 19,

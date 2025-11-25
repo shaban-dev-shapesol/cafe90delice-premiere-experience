@@ -153,16 +153,17 @@ const Contact = () => {
                 <h2 className="text-2xl font-medium text-foreground mb-6">
                   Find Us
                 </h2>
-                <div className="bg-accent rounded-lg h-80 flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <p className="text-muted-foreground">
-                      Interactive map will be displayed here
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      3-5 Keepers Quay, Ancoats, Manchester M4 6GL
-                    </p>
-                  </div>
+                <div className="rounded-lg overflow-hidden h-80 mb-6 shadow-md">
+                  <iframe
+                    src="https://www.google.com/maps?q=3-5+Keepers+Quay,+Ancoats,+Manchester+M4+6GL&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Café 90 Délice Location"
+                  />
                 </div>
                 <div className="space-y-4">
                   <div>

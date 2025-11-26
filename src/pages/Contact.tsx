@@ -167,18 +167,9 @@ const Contact = () => {
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <h3 className="font-medium text-foreground mb-2">Getting Here</h3>
+                    <h3 className="font-medium text-foreground mb-2">Parking</h3>
                     <p className="text-body-elegant">
-                      We're conveniently located in the heart of Manchester, 
-                      just a 5-minute walk from Manchester Piccadilly Station. 
-                      Street parking and nearby car parks available.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-foreground mb-2">Public Transport</h3>
-                    <p className="text-body-elegant">
-                      Bus routes 42, 43, and 44 stop directly outside. 
-                      Manchester Metrolink accessible via Market Street tram stop.
+                      Multi-story car park located at 2 Poland Street, Ancoats, Manchester M4 6BN.
                     </p>
                   </div>
                 </div>
